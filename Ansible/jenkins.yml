@@ -1,0 +1,30 @@
+---
+- hosts: jenkins
+  become: yes
+  remote_user: ubuntu
+  become_user: root
+  tasks:
+    - name: Update
+      apt:
+        update_cache: yes
+    - name: Install Java 
+      apt:
+        name: openjdk-11-jdk
+        state: present
+    - name: Install jenkins key
+      apt_key: 
+        url: https://pkg.jenkins.io/debian-stable/jenkins.io.key 
+        state: present
+    - name: Configure repository
+      apt_repository: 
+        repo: 'deb https://pkg.jenkins.io/debian-stable binary/' 
+        state: present
+    - name: Install Jenkins
+      apt: 
+        name: jenkins
+        state: present
+    - name: Relode systemd daemon 
+      command: systemctl daemon-reload
+    - name: Start Jenkins
+      service: 
+        name: jenkins 

@@ -1,0 +1,7 @@
+# [jenkins]
+# 50.18.41.65 ansible_user=ubuntu ansible_connection=ssh ansible_ssh_private_key_file=/home/einfochips/Downloads/jenkins.pem
+# 52.26.135.3 ansible_user=ubuntu ansible_connection=ssh ansible_ssh_private_key_file=/home/einfochips/Downloads/ngnix.pem
+# 54.190.59.255 ansible_user=ubuntu ansible_connection=ssh ansible_ssh_private_key_file=/home/einfochips/Downloads/jenkins-150256.pem
+[nexus]
+34.217.124.207 ansible_user=ubuntu ansible_connection=ssh ansible_ssh_private_key_file=/home/einfochips/Downloads/nexus1.pem
+35.160.107.49 ansible_user=ubuntu ansible_connection=ssh ansible_ssh_private_key_file=/home/einfochips/Downloads/nexus1.pem
