@@ -1,18 +1,3 @@
-# provider "aws" {
-#   region     = "us-west-1"
-#   access_key = "AKIAV3I4LYHBYUPZSPZX"
-#   secret_key = "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"
-  # default_tags {
-  #   tags = {
-  #     Name = "instance1"
-  #     Source = "Autoscaling"
-  #     Name = "instance2"
-  #     Name = "instance3"
-  #   }
-  #  }
-# }
-
-
 module "VPC" {
   source = "../VPC"
 }
